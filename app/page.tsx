@@ -1,103 +1,151 @@
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <section className="relative h-[80vh] bg-cover bg-center text-white flex items-center justify-center" style={{ backgroundImage: "url('/hero-image.jpg')" }}>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative z-10 text-center">
+            <h1 className="text-5xl font-bold">Expert Legal Solutions</h1>
+            <p className="mt-4 text-lg">
+              Providing comprehensive legal services in Corporate Law and IPR.
+            </p>
+            <Button className="mt-8">Request a Consultation</Button>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <section className="py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl font-bold">Our Practice Areas</h2>
+            <div className="mt-8 grid gap-8 md:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Intellectual Property</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Protecting your innovations and creative works.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Corporate Law</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Guiding your business through complex legal landscapes.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Litigation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Representing your interests in and out of court.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="container mx-auto grid items-center gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-bold">Why Choose Us?</h2>
+              <p className="mt-4 text-gray-600 dark:text-gray-300">
+                At Lexington Law, we combine deep legal expertise with a
+                client-focused approach. Our team is dedicated to delivering
+                exceptional results and building long-term partnerships.
+              </p>
+              <ul className="mt-4 space-y-2">
+                <li>✔ Experienced and specialized attorneys</li>
+                <li>✔ Proven track record of success</li>
+                <li>✔ Personalized legal strategies</li>
+              </ul>
+            </div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/why-choose-us.jpg"
+              alt="Why Choose Us"
+              width={500}
+              height={300}
+              className="rounded-lg"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl font-bold">What Our Clients Say</h2>
+            <div className="mt-8 grid gap-8 md:grid-cols-2">
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="/avatars/01.png" />
+                      <AvatarFallback>JD</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">John Doe</p>
+                      <p className="text-sm text-gray-500">CEO, TechCorp</p>
+                    </div>
+                  </div>
+                  <p className="mt-4">
+                    "Lexington Law provided invaluable guidance on our patent
+                    application. Their expertise was crucial to our success."
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="/avatars/02.png" />
+                      <AvatarFallback>JS</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">Jane Smith</p>
+                      <p className="text-sm text-gray-500">
+                        Founder, Creative Inc.
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-4">
+                    "Their corporate law team is second to none. Highly
+                    recommend for any startup."
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 text-center">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold">
+              Ready to discuss your legal needs?
+            </h2>
+            <Button className="mt-8" asChild>
+              <Link href="/contact">Contact Us Today</Link>
+            </Button>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-800 p-4 text-center text-sm text-white">
+        <p>
+          As per the rules of the Bar Council of India, we are not permitted to
+          solicit work and advertise. The user acknowledges that there has been
+          no advertisement, personal communication, solicitation, invitation or
+          inducement of any sort whatsoever from us or any of our members to
+          solicit any work through this website.
+        </p>
+      </div>
     </div>
   );
 }
