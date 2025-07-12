@@ -45,7 +45,9 @@ export function Header() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="hidden lg:flex items-center gap-4">
-        <Button variant="outline">Request a Consultation</Button>
+        <Link href="/request-consultation">
+          <Button variant="outline">Request a Consultation</Button>
+        </Link>
       </div>
       <Sheet>
         <SheetTrigger asChild className="lg:hidden">
@@ -70,7 +72,9 @@ export function Header() {
                 </Link>
               ))}
             </nav>
-            <Button variant="outline">Request a Consultation</Button>
+            <Link href="/request-consultation">
+              <Button variant="outline">Request a Consultation</Button>
+            </Link>
           </div>
         </SheetContent>
       </Sheet>

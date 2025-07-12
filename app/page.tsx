@@ -18,7 +18,9 @@ export default function Home() {
             <p className="mt-4 text-lg">
               Providing comprehensive legal services in Corporate Law and IPR.
             </p>
-            <Button className="mt-8">Request a Consultation</Button>
+            <Link href="/request-consultation">
+              <Button className="mt-8">Request a Consultation</Button>
+            </Link>
           </div>
         </section>
 
@@ -59,7 +61,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold">Why Choose Us?</h2>
               <p className="mt-4 text-gray-600 dark:text-gray-300">
-                At Lexington Law, we combine deep legal expertise with a
+                At ARS & AGS Legal and IP Associates, we combine deep legal expertise with a
                 client-focused approach. Our team is dedicated to delivering
                 exceptional results and building long-term partnerships.
               </p>
@@ -96,7 +98,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="mt-4">
-                    "Lexington Law provided invaluable guidance on our patent
+                    "ARS & AGS Legal and IP Associates provided invaluable guidance on our patent
                     application. Their expertise was crucial to our success."
                   </p>
                 </CardContent>

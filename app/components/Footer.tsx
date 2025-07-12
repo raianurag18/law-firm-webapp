@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <Logo />
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Lexington Law: Your trusted partner in legal excellence.
+            ARS & AGS Legal and IP Associates: Your trusted partner in legal excellence.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4 md:col-span-2">
@@ -60,7 +60,7 @@ export function Footer() {
       <div className="border-t border-gray-200 dark:border-gray-700">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 text-sm md:flex-row md:px-6">
           <p className="text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} Lexington Law. All rights reserved.
+            © {new Date().getFullYear()} ARS & AGS Legal and IP Associates. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="#" className="hover:underline">

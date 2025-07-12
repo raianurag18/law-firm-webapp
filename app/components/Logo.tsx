@@ -22,7 +22,7 @@ export function Logo() {
           <path d="M3 5h4" />
           <path d="M17 19h4" />
         </svg>
-        <span className="font-bold">Lexington Law</span>
+        <span className="font-bold">ARS & AGS Legal and IP Associates</span>
       </div>
     </Link>
   );
