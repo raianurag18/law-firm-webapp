@@ -11,7 +11,7 @@ import {
 import { Check } from "lucide-react";
 import Link from "next/link";
 
-export default function IPRPage() {
+export default function FamilyEstatesTrustPlanningPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -19,70 +19,98 @@ export default function IPRPage() {
         <div className="container mx-auto">
           <div className="text-center">
             <h1 className="text-4xl font-bold">
-              Intellectual Property Rights (IPR)
+              Family Estates & Trust Planning
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-              Safeguarding your most valuable assets: your ideas and
-              innovations.
+              Securing your legacy and protecting your assets for future generations.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="group flex flex-col">
               <CardHeader>
-                <CardTitle>Patents</CardTitle>
+                <CardTitle>Estate Planning</CardTitle>
                 <CardDescription>
-                  Protect your inventions from unauthorized use.
+                  Crafting a comprehensive plan for your assets.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Patent drafting and filing
+                    Wills and testaments
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Patent prosecution and litigation
+                    Powers of attorney
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Freedom-to-operate analysis
+                    Healthcare directives
                   </li>
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 text-center">
                 <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Intellectual Property Rights")}&serviceType=${encodeURIComponent("Patents")}`}>Request a Consultation</Link>
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Family Estates & Trust Planning")}&serviceType=${encodeURIComponent("Estate Planning")}`}>Request a Consultation</Link>
                 </Button>
               </div>
             </Card>
             <Card className="group flex flex-col">
               <CardHeader>
-                <CardTitle>Trademarks</CardTitle>
+                <CardTitle>Trust Administration</CardTitle>
                 <CardDescription>
-                  Secure your brand identity and reputation.
+                  Managing and distributing trust assets.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Trademark registration and renewal
+                    Revocable and irrevocable trusts
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Opposition and infringement proceedings
+                    Special needs trusts
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Brand portfolio management
+                    Charitable trusts
                   </li>
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 text-center">
                 <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Intellectual Property Rights")}&serviceType=${encodeURIComponent("Trademarks")}`}>Request a Consultation</Link>
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Family Estates & Trust Planning")}&serviceType=${encodeURIComponent("Trust Administration")}`}>Request a Consultation</Link>
+                </Button>
+              </div>
+            </Card>
+            <Card className="group flex flex-col">
+              <CardHeader>
+                <CardTitle>Probate & Estate Litigation</CardTitle>
+                <CardDescription>
+                  Navigating the complexities of estate settlement.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Will contests
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Fiduciary litigation
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Guardianship disputes
+                  </li>
+                </ul>
+              </CardContent>
+              <div className="p-6 pt-0 text-center">
+                <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Family Estates & Trust Planning")}&serviceType=${encodeURIComponent("Probate & Estate Litigation")}`}>Request a Consultation</Link>
                 </Button>
               </div>
             </Card>
@@ -90,13 +118,14 @@ export default function IPRPage() {
 
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-bold">
-              Have an IPR-related query?
+              Plan Your Legacy Today
             </h2>
             <p className="mt-4 text-gray-600 dark:text-gray-300">
-              Our experts are here to help. Schedule a free consultation to
-              discuss your needs.
+              Our estate planning attorneys can help you create a plan that reflects your wishes.
             </p>
-            <Button className="mt-8">Contact Our IPR Team</Button>
+            <Link href="/request-consultation">
+              <Button className="mt-8">Schedule a Planning Session</Button>
+            </Link>
           </div>
         </div>
       </main>

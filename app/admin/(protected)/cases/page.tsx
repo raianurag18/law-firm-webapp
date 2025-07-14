@@ -1,12 +1,28 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import clientPromise from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
 
-const cases = [
-  { id: 1, client: "TechCorp", caseType: "Patent Application", status: "In Progress" },
-  { id: 2, client: "Creative Inc.", caseType: "Trademark Registration", status: "Completed" },
-  { id: 3, client: "Innovate LLC", caseType: "IP Litigation", status: "On Hold" },
-];
+interface Case {
+  _id: string;
+  client: string;
+  caseType: string;
+  status: string;
+}
 
-export default function ActiveCasesPage() {
+async function getCases(): Promise<Case[]> {
+  const client = await clientPromise;
+  const db = client.db("law-firm-webapp");
+  const cases = await db.collection("cases").find({}).toArray();
+  // Convert ObjectId to string for serialization
+  return cases.map(caseItem => ({
+    ...caseItem,
+    _id: caseItem._id.toString(),
+  })) as Case[];
+}
+
+export default async function ActiveCasesPage() {
+  const cases: Case[] = await getCases();
+
   return (
     <div>
       <h1 className="text-3xl font-bold mb-8">Active Cases</h1>
@@ -20,7 +36,7 @@ export default function ActiveCasesPage() {
         </TableHeader>
         <TableBody>
           {cases.map((caseItem) => (
-            <TableRow key={caseItem.id}>
+            <TableRow key={caseItem._id}>
               <TableCell>{caseItem.client}</TableCell>
               <TableCell>{caseItem.caseType}</TableCell>
               <TableCell>{caseItem.status}</TableCell>

@@ -11,7 +11,7 @@ import {
 import { Check } from "lucide-react";
 import Link from "next/link";
 
-export default function IPRPage() {
+export default function CorporateLawPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -19,70 +19,98 @@ export default function IPRPage() {
         <div className="container mx-auto">
           <div className="text-center">
             <h1 className="text-4xl font-bold">
-              Intellectual Property Rights (IPR)
+              Corporate and Commercial Law
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-              Safeguarding your most valuable assets: your ideas and
-              innovations.
+              Expert legal guidance for every stage of your business lifecycle.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="group flex flex-col">
               <CardHeader>
-                <CardTitle>Patents</CardTitle>
+                <CardTitle>Mergers & Acquisitions</CardTitle>
                 <CardDescription>
-                  Protect your inventions from unauthorized use.
+                  Navigate complex transactions with confidence.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Patent drafting and filing
+                    Due diligence
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Patent prosecution and litigation
+                    Negotiation and drafting
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Freedom-to-operate analysis
+                    Regulatory compliance
                   </li>
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 text-center">
                 <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Intellectual Property Rights")}&serviceType=${encodeURIComponent("Patents")}`}>Request a Consultation</Link>
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Corporate and Commercial Law")}&serviceType=${encodeURIComponent("Mergers & Acquisitions")}`}>Request a Consultation</Link>
                 </Button>
               </div>
             </Card>
             <Card className="group flex flex-col">
               <CardHeader>
-                <CardTitle>Trademarks</CardTitle>
+                <CardTitle>Corporate Governance</CardTitle>
                 <CardDescription>
-                  Secure your brand identity and reputation.
+                  Ensuring compliance and best practices.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Trademark registration and renewal
+                    Board advisory
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Opposition and infringement proceedings
+                    Shareholder agreements
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Brand portfolio management
+                    Policy formulation
                   </li>
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 text-center">
                 <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Intellectual Property Rights")}&serviceType=${encodeURIComponent("Trademarks")}`}>Request a Consultation</Link>
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Corporate and Commercial Law")}&serviceType=${encodeURIComponent("Corporate Governance")}`}>Request a Consultation</Link>
+                </Button>
+              </div>
+            </Card>
+            <Card className="group flex flex-col">
+              <CardHeader>
+                <CardTitle>Commercial Contracts</CardTitle>
+                <CardDescription>
+                  Drafting and negotiating robust agreements.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Supply and distribution
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Franchising and licensing
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Joint ventures
+                  </li>
+                </ul>
+              </CardContent>
+              <div className="p-6 pt-0 text-center">
+                <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Corporate and Commercial Law")}&serviceType=${encodeURIComponent("Commercial Contracts")}`}>Request a Consultation</Link>
                 </Button>
               </div>
             </Card>
@@ -90,13 +118,14 @@ export default function IPRPage() {
 
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-bold">
-              Have an IPR-related query?
+              Need Corporate Legal Advice?
             </h2>
             <p className="mt-4 text-gray-600 dark:text-gray-300">
-              Our experts are here to help. Schedule a free consultation to
-              discuss your needs.
+              Our corporate law team is ready to assist you. Let's discuss your business needs.
             </p>
-            <Button className="mt-8">Contact Our IPR Team</Button>
+            <Link href="/request-consultation">
+              <Button className="mt-8">Request a Consultation</Button>
+            </Link>
           </div>
         </div>
       </main>

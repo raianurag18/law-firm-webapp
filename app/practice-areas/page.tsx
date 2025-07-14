@@ -20,11 +20,6 @@ const practiceAreas = [
     href: "/practice-areas/real-estate",
   },
   {
-    title: "Litigation and Dispute Resolution",
-    description: "Representing clients in civil and commercial litigation.",
-    href: "/practice-areas/litigation",
-  },
-  {
     title: "Labour and Employment Law",
     description: "Advising on employment contracts, compliance, and disputes.",
     href: "/practice-areas/labour-law",
@@ -33,6 +28,42 @@ const practiceAreas = [
     title: "Taxation",
     description: "Strategic tax planning and compliance services.",
     href: "/practice-areas/taxation",
+  },
+  {
+    title: "Family Law",
+    description: "Handling divorce, custody, and other family-related matters.",
+    href: "/practice-areas/family-law",
+  },
+  
+  {
+    title: "Private Equity",
+    description: "Advising on private equity transactions, fund formation, and investments.",
+    href: "/practice-areas/private-equity",
+  },
+  {
+    title: "Constitutional Law",
+    description: "Handling matters related to constitutional rights and litigation.",
+    href: "/practice-areas/constitutional-law",
+  },
+  {
+    title: "Consultancy Services",
+    description: "Providing strategic legal consultancy to businesses and individuals.",
+    href: "/practice-areas/consultancy-services",
+  },
+  {
+    title: "Insolvency & Bankruptcy",
+    description: "Assisting with insolvency proceedings and bankruptcy filings.",
+    href: "/practice-areas/insolvency-bankruptcy",
+  },
+  {
+    title: "Family Estates & Trust Planning",
+    description: "Comprehensive planning for family estates and trusts.",
+    href: "/practice-areas/family-estates-trust-planning",
+  },
+  {
+    title: "Government Advisory | Projects & Infrastructure",
+    description: "Advising government bodies on projects and infrastructure development.",
+    href: "/practice-areas/government-advisory",
   },
 ];
 
@@ -49,7 +80,7 @@ export default function PracticeAreasPage() {
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {practiceAreas.map((area) => (
-              <Link href={area.href} key={area.title} legacyBehavior>
+              <Link href={area.href} key={area.title}>
                 <Card className="h-full transform transition-transform hover:scale-105">
                   <CardHeader>
                     <CardTitle>{area.title}</CardTitle>

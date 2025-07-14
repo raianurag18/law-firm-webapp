@@ -11,7 +11,7 @@ import {
 import { Check } from "lucide-react";
 import Link from "next/link";
 
-export default function IPRPage() {
+export default function RealEstateLawPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -19,70 +19,98 @@ export default function IPRPage() {
         <div className="container mx-auto">
           <div className="text-center">
             <h1 className="text-4xl font-bold">
-              Intellectual Property Rights (IPR)
+              Real Estate Law
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-              Safeguarding your most valuable assets: your ideas and
-              innovations.
+              Comprehensive legal services for all your property needs.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="group flex flex-col">
               <CardHeader>
-                <CardTitle>Patents</CardTitle>
+                <CardTitle>Property Transactions</CardTitle>
                 <CardDescription>
-                  Protect your inventions from unauthorized use.
+                  Seamless handling of buying, selling, and leasing.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Patent drafting and filing
+                    Residential and commercial
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Patent prosecution and litigation
+                    Title searches and insurance
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Freedom-to-operate analysis
+                    Mortgage agreements
                   </li>
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 text-center">
                 <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Intellectual Property Rights")}&serviceType=${encodeURIComponent("Patents")}`}>Request a Consultation</Link>
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Real Estate Law")}&serviceType=${encodeURIComponent("Property Transactions")}`}>Request a Consultation</Link>
                 </Button>
               </div>
             </Card>
             <Card className="group flex flex-col">
               <CardHeader>
-                <CardTitle>Trademarks</CardTitle>
+                <CardTitle>Landlord-Tenant Disputes</CardTitle>
                 <CardDescription>
-                  Secure your brand identity and reputation.
+                  Fair representation for landlords and tenants.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Trademark registration and renewal
+                    Lease violations
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Opposition and infringement proceedings
+                    Eviction proceedings
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Brand portfolio management
+                    Security deposit disputes
                   </li>
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 text-center">
                 <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Intellectual Property Rights")}&serviceType=${encodeURIComponent("Trademarks")}`}>Request a Consultation</Link>
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Real Estate Law")}&serviceType=${encodeURIComponent("Landlord-Tenant Disputes")}`}>Request a Consultation</Link>
+                </Button>
+              </div>
+            </Card>
+            <Card className="group flex flex-col">
+              <CardHeader>
+                <CardTitle>Zoning & Land Use</CardTitle>
+                <CardDescription>
+                  Navigating regulations for property development.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Permit applications
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Variances and special exceptions
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-green-500" />
+                    Environmental compliance
+                  </li>
+                </ul>
+              </CardContent>
+              <div className="p-6 pt-0 text-center">
+                <Button asChild variant="outline" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Link href={`/request-consultation?practiceArea=${encodeURIComponent("Real Estate Law")}&serviceType=${encodeURIComponent("Zoning & Land Use")}`}>Request a Consultation</Link>
                 </Button>
               </div>
             </Card>
@@ -90,13 +118,14 @@ export default function IPRPage() {
 
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-bold">
-              Have an IPR-related query?
+              Questions About Real Estate Law?
             </h2>
             <p className="mt-4 text-gray-600 dark:text-gray-300">
-              Our experts are here to help. Schedule a free consultation to
-              discuss your needs.
+              Our real estate attorneys are here to provide clarity and guidance.
             </p>
-            <Button className="mt-8">Contact Our IPR Team</Button>
+            <Link href="/request-consultation">
+              <Button className="mt-8">Schedule a Consultation</Button>
+            </Link>
           </div>
         </div>
       </main>

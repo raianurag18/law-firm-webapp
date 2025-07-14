@@ -42,8 +42,11 @@ export default function BlogPage() {
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <Link href={`/blog/${post.slug}`} key={post.slug} legacyBehavior>
-                <Card className="overflow-hidden transform transition-transform hover:scale-105">
+              <Card
+                key={post.slug}
+                className="overflow-hidden transform transition-transform hover:scale-105"
+              >
+                <Link href={`/blog/${post.slug}`}>
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -58,8 +61,8 @@ export default function BlogPage() {
                     <p className="text-sm text-gray-500">{post.date}</p>
                     <p className="mt-2">{post.excerpt}</p>
                   </CardContent>
-                </Card>
-              </Link>
+                </Link>
+              </Card>
             ))}
           </div>
         </div>
