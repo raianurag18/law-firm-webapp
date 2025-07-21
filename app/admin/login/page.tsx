@@ -3,12 +3,14 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function AdminLoginPage() {
   const [id, setId] = useState("");
   const [key, setKey] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
 
   const handleLogin = () => {
@@ -38,13 +40,23 @@ export default function AdminLoginPage() {
           </div>
           <div>
             <Label htmlFor="key">Key</Label>
-            <Input
-              id="key"
-              type="password"
-              placeholder="Enter your key"
-              value={key}
-              onChange={(e) => setKey(e.target.value)}
-            />
+            <div className="relative">
+              <Input
+                id="key"
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your key"
+                value={key}
+                onChange={(e) => setKey(e.target.value)}
+                className="pr-10"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500"
+              >
+                {showPassword ? <EyeOff /> : <Eye />}
+              </button>
+            </div>
           </div>
         </div>
         <Button onClick={handleLogin} className="w-full">

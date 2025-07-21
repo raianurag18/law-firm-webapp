@@ -7,8 +7,9 @@ import { Button } from "@/components/ui/button";
 
 const adminNavLinks = [
   { href: "/admin", label: "Dashboard" },
-  { href: "/admin/requests", label: "Consultation Requests" },
   { href: "/admin/cases", label: "Active Cases" },
+  { href: "/admin/requests", label: "Consultation Requests" },
+  { href: "/admin/contact-requests", label: "Contact Requests" },
 ];
 
 export default function AdminLayout({ children }: { children: ReactNode }) {

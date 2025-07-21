@@ -1,6 +1,8 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
+import Link from "next/link";
 
 interface Request {
   _id: string;
@@ -25,31 +27,64 @@ async function getRequests(): Promise<Request[]> {
 export default async function ConsultationRequestsPage() {
   const requests: Request[] = await getRequests();
 
+  const newRequests = requests.filter(req => req.status === 'New');
+  const pendingRequests = requests.filter(req => req.status === 'pending');
+  const cancelledRequests = requests.filter(req => req.status === 'cancelled');
+
   return (
     <div>
       <h1 className="text-3xl font-bold mb-8">Consultation Requests</h1>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Email</TableHead>
-            <TableHead>Practice Area</TableHead>
-            <TableHead>Service Type</TableHead>
-            <TableHead>Status</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {requests.map((request) => (
-            <TableRow key={request._id}>
-              <TableCell>{request.name}</TableCell>
-              <TableCell>{request.email}</TableCell>
-              <TableCell>{request.practiceArea}</TableCell>
-              <TableCell>{request.serviceType}</TableCell>
-              <TableCell>{request.status}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card>
+          <CardHeader>
+            <CardTitle>New Requests</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <RequestTable requests={newRequests} />
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Pending Requests</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <RequestTable requests={pendingRequests} />
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Cancelled Requests</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <RequestTable requests={cancelledRequests} />
+          </CardContent>
+        </Card>
+      </div>
     </div>
+  );
+}
+
+function RequestTable({ requests }: { requests: Request[] }) {
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Name</TableHead>
+          <TableHead>Practice Area</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {requests.map((request) => (
+          <TableRow key={request._id}>
+            <TableCell>
+              <Link href={`/admin/requests/${request._id}`} className="block hover:underline">
+                {request.name}
+              </Link>
+            </TableCell>
+            <TableCell>{request.practiceArea}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
 }
