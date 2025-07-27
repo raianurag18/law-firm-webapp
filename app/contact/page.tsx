@@ -88,19 +88,19 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold">Our Office</h2>
               <div className="mt-8">
                 <p>
-                  <strong>Address:</strong> 123 Legal Avenue, Suite 456,
-                  New Delhi, India
+                  <strong>Address:</strong> 2, 7, Sarat Bose Rd, Minto Park, Sreepally
+                  , Kolkata , West Bengal 700020.
                 </p>
                 <p>
-                  <strong>Phone:</strong> +91 11 1234 5678
+                  <strong>Phone:</strong> +91 9918302822
                 </p>
                 <p>
-                  <strong>Email:</strong> contact@lexingtonlaw.com
+                  <strong>Email:</strong> arsandagc_limited@gmail.com
                 </p>
               </div>
               <div className="mt-8 h-64 w-full rounded-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.076378922311!2d77.2167213150829!3d28.62749858241826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b7a58a8d%3A0x43d1f4b3a0b1b1b!2sLexington%20Law%20Group!5e0!3m2!1sen!2sin!4v1678886472845!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.932466613964!2d88.3542736!3d22.5396431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773aaccf57b5%3A0x1ff3f18ffe54cc4d!2sARS%20Management%20Consultancy%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1722101933461!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

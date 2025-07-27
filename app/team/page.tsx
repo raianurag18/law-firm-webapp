@@ -5,30 +5,30 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const teamMembers = [
   {
-    name: "Johnathan Lexington",
+    name: "Avinash Raj",
     role: "Managing Partner",
-    bio: "Johnathan is a seasoned expert in corporate law with over 20 years of experience.",
+    bio: "Seasoned expert in corporate law with over 6 years of experience.",
     avatar: "/avatars/03.png",
     fallback: "JL",
   },
   {
-    name: "Samantha Reed",
+    name: "Aditya Gupta",
     role: "Head of IPR",
-    bio: "Samantha specializes in patent law and has a strong track record in high-stakes litigation.",
+    bio: "Specialized in patent law and has a strong track record in high-stakes litigation.",
     avatar: "/avatars/04.png",
     fallback: "SR",
   },
   {
-    name: "David Chen",
+    name: "Rajiv Singh",
     role: "Senior Associate",
-    bio: "David's practice focuses on real estate law, guiding clients through complex transactions.",
+    bio: "Experienced in real estate law, guiding clients through complex transactions.",
     avatar: "/avatars/05.png",
     fallback: "DC",
   },
   {
-    name: "Maria Garcia",
+    name: "Aman Sinha",
     role: "Associate",
-    bio: "Maria is a rising star in commercial litigation, known for her sharp analytical skills.",
+    bio: "Expertisse in commercial litigation, known for her sharp analytical skills.",
     avatar: "/avatars/06.png",
     fallback: "MG",
   },

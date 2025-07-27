@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 
 const adminNavLinks = [
@@ -13,26 +13,12 @@ const adminNavLinks = [
 ];
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
-  const [isAdmin, setIsAdmin] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const adminStatus = localStorage.getItem("isAdmin");
-    if (adminStatus !== "true") {
-      router.push("/admin/login");
-    } else {
-      setIsAdmin(true);
-    }
-  }, [router]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("isAdmin");
+  const handleLogout = async () => {
+    await fetch("/api/logout", { method: "POST" });
     router.push("/");
   };
-
-  if (!isAdmin) {
-    return null; // or a loading spinner
-  }
 
   return (
     <div className="flex min-h-screen">

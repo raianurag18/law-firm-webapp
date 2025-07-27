@@ -43,6 +43,9 @@ export function Footer() {
             <Link href="/careers" className="text-sm hover:underline">
               Careers
             </Link>
+            <Link href="/admin/login" className="text-sm hover:underline">
+              Admin Login
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-4">

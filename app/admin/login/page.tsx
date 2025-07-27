@@ -11,16 +11,29 @@ export default function AdminLoginPage() {
   const [id, setId] = useState("");
   const [key, setKey] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleLogin = () => {
-    // In a real application, you would validate the ID and key against a server.
-    // For this example, we'll use a simple check.
-    if (id === "admin" && key === "password") {
-      localStorage.setItem("isAdmin", "true");
-      router.push("/admin");
-    } else {
-      alert("Invalid credentials");
+  const handleLogin = async () => {
+    setError("");
+    try {
+      const res = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id, key }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.message === "success") {
+        router.push("/admin");
+      } else {
+        setError(data.message || "Invalid credentials");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
     }
   };
 
@@ -59,6 +72,7 @@ export default function AdminLoginPage() {
             </div>
           </div>
         </div>
+        {error && <p className="text-sm text-red-500 text-center">{error}</p>}
         <Button onClick={handleLogin} className="w-full">
           Login
         </Button>
