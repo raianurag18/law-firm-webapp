@@ -89,7 +89,7 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/11.png" />
+                      <AvatarImage src="/avatars/11.jpg" />
                       <AvatarFallback>RP</AvatarFallback>
                     </Avatar>
                     <div>
@@ -111,7 +111,7 @@ export default function Home() {
                       <AvatarFallback>SM</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold">Sunita Mehta</p>
+                      <p className="font-semibold">Sumit Mehta</p>
                       <p className="text-sm text-gray-500">
                         Superviser, Creative Solutions
                       </p>
@@ -150,7 +150,7 @@ export default function Home() {
                       <AvatarFallback>PG</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold">Priya Gupta</p>
+                      <p className="font-semibold">Priyank Gupta</p>
                       <p className="text-sm text-gray-500">
                         MD, Gupta Enterprises
                       </p>
