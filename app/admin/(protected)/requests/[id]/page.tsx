@@ -6,7 +6,12 @@ import { ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-export default async function RequestDetailsPage({ params }: { params: { id: string } }) {
+type PageProps = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function RequestDetailsPage({ params }: PageProps) {
   const { id } = params;
   const request = await getRequestById(id);
 

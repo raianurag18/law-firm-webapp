@@ -5,7 +5,7 @@ export async function POST() {
     const response = NextResponse.json({ message: 'success' });
     response.cookies.set('isAdmin', '', { httpOnly: true, path: '/', maxAge: -1 });
     return response;
-  } catch (error) {
+  } catch {
     return NextResponse.json({ message: 'An error occurred' }, { status: 500 });
   }
 }

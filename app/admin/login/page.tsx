@@ -32,7 +32,7 @@ export default function AdminLoginPage() {
       } else {
         setError(data.message || "Invalid credentials");
       }
-    } catch (err) {
+    } catch {
       setError("An error occurred. Please try again.");
     }
   };

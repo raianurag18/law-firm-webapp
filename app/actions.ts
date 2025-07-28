@@ -3,7 +3,6 @@
 import clientPromise from "@/lib/mongodb";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
 
 export async function handleFormSubmit(formData: FormData) {
   const rawFormData = {
@@ -81,7 +80,7 @@ export async function updateRequestStatus(id: string, status: 'accepted' | 'pend
   redirect('/admin/requests');
 }
 
-export async function handleContactFormSubmit(prevState: any, formData: FormData) {
+export async function handleContactFormSubmit(prevState: { message: string; errors?: { name?: string; email?: string; message?: string } }, formData: FormData) {
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
   const message = formData.get("message") as string;

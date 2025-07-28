@@ -1,6 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import clientPromise from "@/lib/mongodb";
-import { ObjectId } from "mongodb";
 
 interface Case {
   _id: string;
