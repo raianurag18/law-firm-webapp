@@ -1,7 +1,6 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Link from "next/link";
 import Image from "next/image";
 
 const blogPosts = [
@@ -46,22 +45,20 @@ export default function BlogPage() {
                 key={post.slug}
                 className="overflow-hidden transform transition-transform hover:scale-105"
               >
-                <Link href={`/blog/${post.slug}`}>
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={400}
-                    height={250}
-                    className="w-full object-cover"
-                  />
-                  <CardHeader>
-                    <CardTitle>{post.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500">{post.date}</p>
-                    <p className="mt-2">{post.excerpt}</p>
-                  </CardContent>
-                </Link>
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={400}
+                  height={250}
+                  className="w-full object-cover"
+                />
+                <CardHeader>
+                  <CardTitle>{post.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-500">{post.date}</p>
+                  <p className="mt-2">{post.excerpt}</p>
+                </CardContent>
               </Card>
             ))}
           </div>
