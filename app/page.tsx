@@ -89,12 +89,12 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/01.png" />
-                      <AvatarFallback>JD</AvatarFallback>
+                      <AvatarImage src="/avatars/03.png" />
+                      <AvatarFallback>RP</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold">John Doe</p>
-                      <p className="text-sm text-gray-500">CEO, TechCorp</p>
+                      <p className="font-semibold">Rohan Patel</p>
+                      <p className="text-sm text-gray-500">CEO, Innovate India</p>
                     </div>
                   </div>
                   <p className="mt-4">
@@ -107,19 +107,57 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/02.png" />
-                      <AvatarFallback>JS</AvatarFallback>
+                      <AvatarImage src="/avatars/04.png" />
+                      <AvatarFallback>SM</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold">Jane Smith</p>
+                      <p className="font-semibold">Sunita Mehta</p>
                       <p className="text-sm text-gray-500">
-                        Founder, Creative Inc.
+                        Founder, Creative Solutions
                       </p>
                     </div>
                   </div>
                   <p className="mt-4">
                     "Their corporate law team is second to none. Highly
                     recommend for any startup."
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="/avatars/05.png" />
+                      <AvatarFallback>VK</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">Vikram Kumar</p>
+                      <p className="text-sm text-gray-500">
+                        Director, Kumar Exports
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-4">
+                    "We have been working with them for years. Their team is very professional and responsive."
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="/avatars/06.png" />
+                      <AvatarFallback>PG</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">Priya Gupta</p>
+                      <p className="text-sm text-gray-500">
+                        MD, Gupta Enterprises
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-4">
+                    "Excellent service and deep knowledge of the law. They are our go-to firm for all legal matters."
                   </p>
                 </CardContent>
               </Card>
