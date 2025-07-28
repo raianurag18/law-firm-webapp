@@ -89,12 +89,12 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/03.png" />
+                      <AvatarImage src="/avatars/11.png" />
                       <AvatarFallback>RP</AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="font-semibold">Rohan Patel</p>
-                      <p className="text-sm text-gray-500">CEO, Innovate India</p>
+                      <p className="text-sm text-gray-500">Senior Manager, Innovate India</p>
                     </div>
                   </div>
                   <p className="mt-4">
@@ -107,19 +107,19 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/04.png" />
+                      <AvatarImage src="/avatars/22.png" />
                       <AvatarFallback>SM</AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="font-semibold">Sunita Mehta</p>
                       <p className="text-sm text-gray-500">
-                        Founder, Creative Solutions
+                        Superviser, Creative Solutions
                       </p>
                     </div>
                   </div>
                   <p className="mt-4">
                     "Their corporate law team is second to none. Highly
-                    recommend for any startup."
+                    recommend for any letigation."
                   </p>
                 </CardContent>
               </Card>
@@ -127,13 +127,13 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/05.png" />
+                      <AvatarImage src="/avatars/33.png" />
                       <AvatarFallback>VK</AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="font-semibold">Vikram Kumar</p>
                       <p className="text-sm text-gray-500">
-                        Director, Kumar Exports
+                        Associate Director, Kumar Exports
                       </p>
                     </div>
                   </div>
@@ -146,7 +146,7 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar>
-                      <AvatarImage src="/avatars/06.png" />
+                      <AvatarImage src="/avatars/44.png" />
                       <AvatarFallback>PG</AvatarFallback>
                     </Avatar>
                     <div>
